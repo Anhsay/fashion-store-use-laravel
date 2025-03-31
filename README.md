@@ -22,7 +22,7 @@ Thiết kế, xây dựng website thương hiệu thời trang sử dụng Larav
 - PHP 8.x
 - Composer
 - MySQL
-- Node.js & npm (nếu dùng frontend với Vite)
+- Node.js & npm 
 
 
 ## 📌 Ghi chú
