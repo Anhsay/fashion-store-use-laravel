@@ -1,0 +1,321 @@
+/* Reset một số style mặc định */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Style chung cho body */
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Style cho tiêu đề h1 */
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease; /* Hiệu ứng đổi màu khi hover */
+}
+
+h1:hover {
+    color: #007bff; /* Đổi màu khi hover */
+}
+
+/* Style cho navbar brand */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    transition: transform 0.3s ease; /* Hiệu ứng phóng to khi hover */
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+}
+
+/* Style cho footer */
+footer {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    transition: background-color 0.3s ease; /* Hiệu ứng đổi màu nền khi hover */
+}
+
+footer:hover {
+    background-color: #e9ecef; /* Đổi màu nền khi hover */
+}
+
+/* Style cho card image */
+.card-img-top {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Bo góc phía trên */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng phóng to và đổ bóng khi hover */
+}
+
+.card-img-top:hover {
+    transform: scale(1.05); /* Phóng to khi hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Giảm kích thước tiêu đề trên màn hình nhỏ */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem; /* Giảm kích thước navbar brand */
+    }
+
+    .card-img-top {
+        height: 300px; /* Giảm chiều cao hình ảnh trên màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Tiêu đề nhỏ hơn trên điện thoại */
+    }
+
+    .card-img-top {
+        height: 200px; /* Chiều cao hình ảnh nhỏ hơn trên điện thoại */
+    }
+}
+
+/* Container chứa toàn bộ thông tin sản phẩm */
+.product-detail-container {
+    display: flex;
+    gap: 2rem; /* Khoảng cách giữa 2 cột */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cột thông tin sản phẩm (bên trái) */
+.product-info {
+    flex: 1; /* Chiếm 1 phần không gian */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Khoảng cách giữa các phần tử */
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.product-info .product-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.product-info .product-price {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.product-info .product-category {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Nút thêm vào giỏ hàng */
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Cột hình ảnh sản phẩm (bên phải) */
+.product-image {
+    flex: 1; /* Chiếm 1 phần không gian */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product-detail-container {
+        flex-direction: column; /* Chuyển sang layout dọc trên màn hình nhỏ */
+        padding: 1rem;
+    }
+
+    .product-info h1 {
+        font-size: 2rem;
+    }
+
+    .product-info .product-price {
+        font-size: 1.25rem;
+    }
+
+    .product-info .product-category {
+        font-size: 1rem;
+    }
+
+    .add-to-cart-btn {
+        width: 100%; /* Nút chiếm toàn bộ chiều rộng */
+    }
+}
+
+/* Container chứa toàn bộ danh sách sản phẩm */
+.product-list-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-list-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Lưới sản phẩm */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động điều chỉnh số cột */
+    gap: 1.5rem; /* Khoảng cách giữa các sản phẩm */
+}
+
+/* Card sản phẩm */
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hình ảnh sản phẩm */
+.product-image img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-category {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Nút xem chi tiết sản phẩm */
+.view-details-btn {
+    background-color: #28a745; /* Màu xanh lá cây */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+    text-decoration: none; /* Loại bỏ gạch chân của thẻ <a> */
+    display: inline-block; /* Để thẻ <a> hiển thị như nút */
+}
+
+.view-details-btn:hover {
+    background-color: #218838; /* Màu xanh lá cây đậm hơn khi hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Điều chỉnh số cột trên màn hình nhỏ */
+    }
+
+    .product-list-container h1 {
+        font-size: 2rem;
+    }
+
+    .product-name {
+        font-size: 1.1rem;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+
+    .product-category {
+        font-size: 0.9rem;
+    }
+}
+
+/* Form lọc sản phẩm */
+.filter-form {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filter-form label {
+    font-size: 1rem;
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+.filter-form select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.filter-form select:hover {
+    border-color: #007bff;
+}

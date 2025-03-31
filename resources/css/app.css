@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nút giỏ hàng */
+.cart-icon {
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.cart-badge {
+    font-size: 0.6rem;
+    padding: 0.2em 0.4em;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
